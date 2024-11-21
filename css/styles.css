@@ -236,11 +236,11 @@ a.btn {
 @media screen and (max-width: 600px) {
   .blob-2, .blob-3{
     display: none;
-    height: 0; /* Reset height */
-    width: 0;  /* Reset width */
+    height: 0; 
+    width: 0;  
   }
   .blob-1 {
-    top: 45%; /* Adjust based on the text positioning */
+    top: 45%; 
     left: 30%;
     height: 180px;
     width: 180px;
@@ -251,10 +251,10 @@ a.btn {
   .bg-gradient {
     width: 50%;
     height: 50%;
-    top: 20%; /* Adjust based on the text positioning */
+    top: 20%; 
     left: 40%;
     transform: translate(-50%, -45%);
-    filter: blur(30px); /* Reduce blur to save space */
+    filter: blur(30px); 
   }
   
   .hero-container{
@@ -361,7 +361,7 @@ a.btn {
   border-radius: 20px;
   box-shadow: 0 4px 10px rgb(79, 76, 1);
   padding: 20px;
-  width: calc(25% - 20px); /* Responsive cards */
+  width: calc(25% - 20px); 
   min-width: 250px;
   max-width: 300px;
   text-align: left;
@@ -424,11 +424,11 @@ a.btn {
   gap: 20px;
   overflow-x: auto;
   padding: 10px;
-  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  scrollbar-width: none; 
 }
 
 .video-slider::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in Chrome and Edge */
+  display: none; 
 }
 
 .video-slider video {
@@ -439,46 +439,85 @@ a.btn {
 }
 
 /* Social Media Section */
+/* CSS */
 .socials {
-  margin-top: 80px;
-}
-
-.socials p {
-  font-size: 1.2rem;
-  color: #fff4f4;
-  margin-bottom: 20px;
   text-align: center;
+  padding: 20px;
+  background-color: #111;
+  color: #fff;
+  width: 90%;
+  margin: 0 auto;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
 }
 
 .social-buttons {
   display: flex;
-  gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
 }
 
-.social-buttons .btn {
-  padding: 10px 20px;
-  font-size: 1rem;
-  text-transform: uppercase;
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
-  border-radius: 5px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.btn img {
+  margin-right: 8px;
+}
+
+/* Instagram Button */
 .btn-insta {
-  background: #e1306c;
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
 }
 
 .btn-insta:hover {
-  background: #c82361;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(239, 82, 140, 0.5);
 }
 
+/* TikTok Button */
 .btn-tiktok {
   background: #000;
+  border: 1px solid white;
+  padding: auto;
+}
+
+a.btn-tiktok, a.btn-insta{
+  color: white;
 }
 
 .btn-tiktok:hover {
-  background: #333;
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(254, 44, 85, 0.5);
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .btn {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .btn img {
+    margin-right: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .btn i {
+    font-size: 18px;
+  }
+}
