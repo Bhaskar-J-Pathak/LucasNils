@@ -233,6 +233,68 @@ a.btn {
   font-weight: bold;
 }
 
+@media screen and (max-width: 600px) {
+  .blob-2, .blob-3{
+    display: none;
+    height: 0; /* Reset height */
+    width: 0;  /* Reset width */
+  }
+  .blob-1 {
+    top: 45%; /* Adjust based on the text positioning */
+    left: 30%;
+    height: 180px;
+    width: 180px;
+    margin-bottom: auto;
+    margin-top: 10px;
+  }
+
+  .bg-gradient {
+    width: 50%;
+    height: 50%;
+    top: 20%; /* Adjust based on the text positioning */
+    left: 40%;
+    transform: translate(-50%, -45%);
+    filter: blur(30px); /* Reduce blur to save space */
+  }
+  
+  .hero-container{
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
+
+  .cta button{
+    width: 50%;
+    height: 50%;
+    font: 10px;
+    top: 20%;
+    padding: 10px;
+    margin-bottom: auto;
+  }
+  
+  .what-i-offer{
+    margin-top: -60%;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+  .blob {
+    width: 30%;
+    height: 30%;
+  }
+  .blob-3 {
+    top: 15%;
+    right: 5%;
+    height: 25%;
+  }
+  .bg-gradient{
+    top: 20%;
+    left: 40%;
+  }
+  .what-i-offer{
+    margin-top: -50%;
+  }
+}
+
 /* About */
 
 .info{
