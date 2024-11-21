@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lucas Nils Danielson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Delius&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/3dslider.css">
+  </head>
+  <body>
+
+    <!-- Landing Page -->
+    <div class="container">
+      <div class="nav-container">
+        <div class="nav">
+          <div class="nav-logo nav-item">
+            <a href="index.html">Lucas Danielson</a>
+          </div>
+          <div class="nav-links nav-item">
+            <a href="index.html">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#Contact">Contact</a>
+          </div>
+          <div class="nav-cta nav-item">
+            <a href="#">Connect with Me</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- The background blob -->
+      <div class="bg-gradient">
+        <svg
+          viewBox="0 0 500 500"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="100%"
+          id="blobSvg"
+        >
+          <defs>
+            <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" style="stop-color: rgb(255, 223, 0)"></stop>
+              <stop offset="100%" style="stop-color: rgb(255, 71, 71)"></stop>
+            </linearGradient>
+          </defs>
+          <path fill="url(#gradient)">
+            <animate
+              attributeName="d"
+              dur="5s"
+              repeatCount="indefinite"
+              values="M437,286Q436,322,408.5,346Q381,370,362,403Q343,436,306.5,453.5Q270,471,227.5,474.5Q185,478,144.5,460.5Q104,443,96.5,396Q89,349,51,321.5Q13,294,13,250Q13,206,47,175.5Q81,145,104,116Q127,87,162.5,77Q198,67,234,53Q270,39,315,33.5Q360,28,382.5,68.5Q405,109,433,138.5Q461,168,449.5,209Q438,250,437,286Z;
+
+          M473.5,290.5Q458,331,420,351Q382,371,369.5,418Q357,465,313.5,465Q270,465,230.5,461.5Q191,458,161,432.5Q131,407,89,391Q47,375,51.5,330.5Q56,286,35.5,246Q15,206,36.5,168.5Q58,131,92.5,109Q127,87,157.5,59.5Q188,32,227,52Q266,72,312.5,51.5Q359,31,375,76.5Q391,122,407.5,152.5Q424,183,456.5,216.5Q489,250,473.5,290.5Z;
+
+          M423.5,282.5Q418,315,423,363.5Q428,412,379.5,412.5Q331,413,299.5,431Q268,449,226.5,464Q185,479,151,452.5Q117,426,105,386.5Q93,347,61.5,319Q30,291,46.5,253Q63,215,77,183.5Q91,152,109,119.5Q127,87,162.5,78Q198,69,234,49Q270,29,309.5,40.5Q349,52,379,78.5Q409,105,429,139Q449,173,439,211.5Q429,250,423.5,282.5Z;
+
+          M459.5,294Q477,338,428.5,353Q380,368,370,419.5Q360,471,313.5,451.5Q267,432,228.5,447.5Q190,463,147,453Q104,443,74.5,410Q45,377,52.5,331.5Q60,286,60,250.5Q60,215,68,178.5Q76,142,97,108.5Q118,75,156,64.5Q194,54,231.5,49Q269,44,300.5,64.5Q332,85,368,97.5Q404,110,435,138Q466,166,454,208Q442,250,459.5,294Z;
+
+          M455,283.5Q424,317,404.5,345Q385,373,368,412.5Q351,452,311,464.5Q271,477,227,481Q183,485,156,447.5Q129,410,95.5,388Q62,366,37,330.5Q12,295,18,251.5Q24,208,45.5,172.5Q67,137,103,120Q139,103,162.5,65Q186,27,228.5,25.5Q271,24,314.5,28.5Q358,33,388.5,64.5Q419,96,433,135Q447,174,466.5,212Q486,250,455,283.5Z;
+
+          M437,286Q436,322,408.5,346Q381,370,362,403Q343,436,306.5,453.5Q270,471,227.5,474.5Q185,478,144.5,460.5Q104,443,96.5,396Q89,349,51,321.5Q13,294,13,250Q13,206,47,175.5Q81,145,104,116Q127,87,162.5,77Q198,67,234,53Q270,39,315,33.5Q360,28,382.5,68.5Q405,109,433,138.5Q461,168,449.5,209Q438,250,437,286Z
+          "
+            ></animate>
+          </path>
+        </svg>
+      </div>
+      <div class="hero-container">
+        <div class="hero">
+          <h1>Step into <br />the world <br />of Magic</h1>
+          <div class="cta">
+            <button><a href="#about" class="btn">Walk In!</a></button>
+          </div>
+        </div>
+      </div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+
+    <!-- Filler -->
+    <div class="about" id="about">
+      <section class="info">
+        <h1>Who am I?</h1>
+        <p>
+        Hi there! I'm Lucas Danielsson, a professional card magician with
+        nearly a decade of experience bringing the magic to life. Over the
+        years, I've performed across Sweden and ventured internationally to
+        places like Zanzibar, as well as on cruise ships between Norway and
+        Finland. One of my proudest moments was showcasing my skills at the
+        2024 Swedish Championship in Magic.
+        </p>
+        <hr class="line">
+        <p>
+        I'm passionate about magic and love to share my craft with others. I
+        believe that magic is a universal language that can bring people
+        together and create unforgettable memories. Whether it's a private
+        event like a party, wedding, or baptism, I bring magic to any occasion.
+        I also offer workshops and classes for those who want to learn the art
+        of magic themselves.</p>
+      </section>
+    </div>
+
+
+    <!-- 3d Slider -->
+    <div class="banner">
+      <div class="slider" style="--quantity: 8">
+        <div class="item" style="--position: 1"><img src="assets/img 1.jpeg" alt=""></div>
+        <div class="item" style="--position: 2"><img src="assets/img2.jpeg" alt=""></div>
+        <div class="item" style="--position: 3"><img src="assets/img3.jpeg" alt=""></div>
+        <div class="item" style="--position: 4"><img src="assets/img4.jpeg" alt=""></div>
+        <div class="item" style="--position: 5"><img src="assets/img5.png" alt=""></div>
+        <div class="item" style="--position: 6"><img src="assets/img6.jpeg" alt=""></div>
+        <div class="item" style="--position: 7"><img src="assets/image-2.jpeg" alt=""></div>
+        <div class="item" style="--position: 8"><img src="assets/img7.jpeg" alt=""></div>
+      </div>
+    </div>
+
+
+      <!-- What I Offer -->
+      <section class="what-i-offer">
+        <h2>What I Offer</h2>
+        <div class="cards-container">
+          <div class="card">
+            <h3>Personalized Magic Shows</h3>
+            <p>From sophisticated sleight of hand to mind-bending illusions, I create a custom performance that resonates with your audience. No two events are alike—your show will be as unique as your occasion.</p>
+          </div>
+          <div class="card">
+            <h3>Event Types</h3>
+            <ul>
+              <li><strong>Weddings:</strong> Add a magical touch to your special day with captivating performances.</li>
+              <li><strong>Corporate Events:</strong> Energize your team with unforgettable illusions.</li>
+              <li><strong>Private Parties:</strong> Bring magic to birthdays, anniversaries, or casual gatherings.</li>
+              <li><strong>Workshops:</strong> Learn the art of magic in interactive sessions.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>International Expertise</h3>
+            <p>With nearly a decade of experience performing across Sweden, Zanzibar, and beyond, I bring a global flair to every show, tailored for diverse audiences.</p>
+          </div>
+          <div class="card">
+            <h3>Tailored Themes</h3>
+            <p>From vintage elegance to modern spectacle, I seamlessly integrate your event’s style into my performance for a cohesive experience.</p>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Horizontal Slider Section -->
+      <section class="horizontal-slider">
+        <h2>Why Choose Me?</h2>
+        <div class="video-slider">
+          <!-- Videos will go here -->
+          <video src="./assets/video1.mov" class="videos" controls></video>
+          <video src="./assets/video2.mov" class="videos" controls></video>
+          <video src="./assets/video3.mov" class="videos" controls></video>
+          <video src="./assets/video4.mov" class="videos" controls></video>
+          <video src="./assets/video5.mp4" class="videos" controls></video>
+          <video src="./assets/video6.mp4" class="videos" controls></video>
+          <video src="./assets/video7.mp4" class="videos" controls></video>
+        </div>
+      </section>
+      
+      <!-- Social Media Buttons -->
+      <section class="socials">
+        <p>Follow me on my socials to see more:</p>
+        <div class="social-buttons">
+          <a href="https://www.instagram.com" class="btn btn-insta" target="_blank">Instagram</a>
+          <a href="https://www.tiktok.com" class="btn btn-tiktok" target="_blank">TikTok</a>
+        </div>
+      </section>
+    </section>
+
+
+
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="./js/script.js"></script>
+   
+  </script>
+  </body>
+</html>
