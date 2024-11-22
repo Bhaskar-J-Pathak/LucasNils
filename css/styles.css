@@ -560,7 +560,7 @@ a.btn-tiktok, a.btn-insta{
 
   .hero-container {
     margin-top: 25%;
-    font-size: 12px;
+    font-size: 16px;
   }
 
   .cta button {
@@ -582,20 +582,25 @@ a.btn-tiktok, a.btn-insta{
 
 /* Small Tablets and Large Mobiles (601px to 900px) */
 @media screen and (min-width: 601px) and (max-width: 900px) {
-  .blob {
+  .blob-1 {
+    width: 20%;
+    height: 20%;
+    top: 10%;
+    left: 5%;
+  }
+  .blob-2{
     width: 30%;
     height: 30%;
-  }
-
-  .blob-3 {
-    top: 15%;
+    top: 40%;
     right: 5%;
-    height: 25%;
+  
+  .blob-3 {
+    display: none;
   }
 
   .bg-gradient {
     top: 20%;
-    left: 40%;
+    left: 25%;
   }
 
   .what-i-offer {
