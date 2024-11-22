@@ -626,7 +626,8 @@ a.btn-tiktok, a.btn-insta{
   .cta button {
     display: none;
   }
-
+  .socials{
+    margin-bottom: 50px;}
   .what-i-offer {
     margin-top: -40%;
   }
