@@ -639,10 +639,15 @@ a.btn-tiktok, a.btn-insta{
   .what-i-offer {
     margin-top: -40%;
   }
-
-
 }
-
+  
+@media screen and (min-width: 481px) and (max-width: 600px){
+  .blob{
+display:none;
+}
+  .cta button{
+    display: none;
+  }
 /* Buttons and Images Responsiveness (Max Width 768px) */
 @media screen and (max-width: 768px) {
   .btn {
