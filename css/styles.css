@@ -522,3 +522,102 @@ a.btn-tiktok, a.btn-insta{
     font-size: 18px;
   }
 }
+
+
+.form-container {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px red;
+  width: 90%; 
+  max-width: 600px;
+  text-align: center;
+  margin: auto;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+}
+
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+/* Button Styling */
+.form-group button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%; 
+}
+
+.form-group button:hover {
+  background: #0056b3;
+  transform: scale(1.02);
+}
+
+/* WhatsApp Button Styling */
+.whatsapp-btn {
+  margin-top: 20px;
+  background: #25d366;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, transform 0.3s ease;
+  width: 100%; 
+}
+
+.whatsapp-btn:hover {
+  background: #1da852;
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 20px; 
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-group button,
+  .whatsapp-btn {
+    font-size: 14px;
+  }
+}
