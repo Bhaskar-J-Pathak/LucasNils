@@ -593,6 +593,7 @@ a.btn-tiktok, a.btn-insta{
     height: 30%;
     top: 40%;
     right: 5%;
+  }
   
   .blob-3 {
     display: none;
@@ -641,13 +642,15 @@ a.btn-tiktok, a.btn-insta{
   }
 }
   
-@media screen and (min-width: 481px) and (max-width: 600px){
+@media screen and (min-width: 480px) and (max-width: 600px){
   .blob{
-display:none;
-}
+  display:none;
+  }
   .cta button{
     display: none;
   }
+}
+
 /* Buttons and Images Responsiveness (Max Width 768px) */
 @media screen and (max-width: 768px) {
   .btn {
