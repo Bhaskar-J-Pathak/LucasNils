@@ -612,7 +612,7 @@ a.btn-tiktok, a.btn-insta{
   .bg-gradient {
     width: 70%;
     height: 70%;
-    top: 30%;
+    top: 35%;
     left: 30%;
     filter: blur(15px);
   }
@@ -627,7 +627,10 @@ a.btn-tiktok, a.btn-insta{
     display: none;
   }
   .socials{
-    margin-bottom: 50px;}
+    margin-bottom: 50px;
+    height: auto;
+  }
+  
   .what-i-offer {
     margin-top: -40%;
   }
