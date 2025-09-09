@@ -1,0 +1,121 @@
+.scroll-spacer{
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+footer{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: #EFEAE3;
+    bottom: 0%;
+    z-index: 2;
+}
+.footerupper{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6.2vw 5.7vw;
+    padding-bottom: 4vw;
+}
+footer h2{
+    font-family: sun-mediu;
+    font-size: 2.1vw;
+    font-weight: 700;
+}
+footer p{
+    font-size: 1.3vw;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    gap: 2vw;
+    width: 26%;
+}
+.email h6{
+    font-size: 1.2vw;
+    font-weight: 200;
+    padding-bottom:0.5vw ;
+    border-bottom: 1px solid #d3cdc1df;
+    color: #d3cdc1df;
+}
+.footerlower{
+    position: relative;
+    padding: 0 1.5vw;
+}
+
+footer h1{
+    font-family: Bricolage Grotesque;
+    font-weight: bolder;
+    font-size: 23.5vw;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--primary-white);
+    font-size: 23.5vw;
+}
+
+.footerupper a h1{
+    font-family: "Bricolage Grotesque";
+    color: white;
+    font-size: 23.5vw;
+}
+
+.footerlower div{
+    padding: 1vw 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footerlower div h5{
+    font-size: 1.1vw;
+    font-weight: 200;
+}
+.footerlower img{
+    margin-top: 5vw;
+    border-bottom: 1px solid #504A45;
+    padding-bottom: 2vw;
+    width: 100%;
+}
+footer .shape1{
+    position: absolute;
+    background-color: #dc143ccc;
+    filter: blur(50px);
+    top: -50%;
+    left: -20%;
+    width: 90%;
+    height: 90%;
+    animation: shape1 3s linear infinite alternate;
+    
+}
+footer .shape2{
+    position: absolute;
+    background-color: #dc143ccc;
+    filter: blur(50px);
+    right: -27%;
+    top: -27%;
+    width: 70%;
+    height: 90%;
+    animation: shape2 4s linear infinite alternate;
+}
+
+@keyframes shape1 {
+    from{
+        transform: rotate(-10deg);
+    }
+    to{
+        transform: rotate(-20deg);
+    }
+}
+@keyframes shape2 {
+    from{
+        transform: rotate(30deg);
+    }
+    to{
+        transform: rotate(45deg);
+    }
+}
