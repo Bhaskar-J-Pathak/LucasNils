@@ -3,307 +3,734 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucas Nils Danielsson | Magician</title>
+    <title>Lucas Nils Danielsson | Sleight of Hand Artist</title>
+    <meta
+      name="description"
+      content="Lucas Nils Danielsson - Professional sleight of hand artist from Sweden specializing in close-up magic, card artistry, and mind-bending illusions."
+    />
+
+    <!-- Preload critical fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/preloader.css" />
-    <link rel="stylesheet" href="css/hero.css" />
-    <link rel="stylesheet" href="css/menu.css" />
-    <link rel="stylesheet" href="css/gallery.css" />
-    <link rel="icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="css/footer.css" />
 
+    <!-- GSAP and plugins -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/CSSRulePlugin.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
-    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <!-- Lenis smooth scroll -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"
+      integrity="sha256-eUny2Hql6qBbqmuoQ60u6ueG2eCZVKQaGygqwCPquug="
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Preloader -->
     <div class="preloader">
-      <h1 class="counter">0</h1>
-      <div class="site-teaser">
-        <span>Use headphones for better experience</span>
-      </div>
-      <div class="circles">
-        <div class="circle circle-outer"></div>
-        <div class="circle circle-inner"></div>
-        <div class="circle-inner-rotator"></div>
-        <div class="block"></div>
-      </div>
-      <div class="container">
-        <h1>Lu<span>ca</span>s</h1>
-      </div>
+      <div class="preloader-top"></div>
+      <div class="preloader-bottom"></div>
+      <div class="preloader-text">Lucas</div>
+      <div class="preloader-line"></div>
+      <div class="preloader-counter">00</div>
     </div>
 
-    <div id="toggle-btn" class="btn">
-      <div class="btn-outline btn-outline-1"></div>
-      <div class="btn-outline btn-outline-2"></div>
-      <div id="hamburger">
-        <span class="line line-1"></span>
-        <span class="line line-2"></span>
-      </div>
-    </div>
+    <!-- Navigation -->
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <div class="overlay">
-      <svg viewBox="0 0 100 100">
-        <path d="M0 0 H100 V0 H0 Z"></path>
-      </svg>
-    </div>
-
-    <div class="menu">
-      <div class="primary-menu">
-        <div class="menu-container">
-          <div class="wrapper">
-            <div class="menu-item">
-              <a href="#"><span>I</span>Index</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#"><span>II</span>Work</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#"><span>III</span>About</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-          </div>
+    <nav class="nav-overlay">
+      <div class="nav-content">
+        <div class="nav-left">
+          <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Journey</a></li>
+            <li><a href="#gallery">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <ul class="social-menu">
+            <li><a href="#" target="_blank">Instagram</a></li>
+            <li><a href="#" target="_blank">YouTube</a></li>
+            <li><a href="#" target="_blank">LinkedIn</a></li>
+            <li><a href="#" target="_blank">Email</a></li>
+          </ul>
         </div>
       </div>
-      <div class="secondary-menu">
-        <div class="menu-container">
-          <div class="wrapper">
-            <div class="menu-item">
-              <a href="#">Instagram</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#">Tiktok</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#">Contact</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-            <div class="menu-item">
-              <a href="#">Credits</a>
-              <div class="menu-item-revealer"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    </nav>
 
+    <!-- Main Content -->
     <main>
-      <div class="smooth-scroll">
-        <section class="hero">
-          <div class="section">
-            <div class="section-wrapper">
-              <div class="content">
-                <h1 class="hero-header h-1">Lucas</h1>
-                <h1 class="hero-header h-2">Nils</h1>
-                <h1 class="hero-header h-3">Danielsson</h1>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="floating-cards">
+          <img
+            src="https://via.placeholder.com/120x180/FFFFFF/000000?text=Card"
+            alt="Floating Card 1"
+            class="floating-card"
+          />
+          <img
+            src="https://via.placeholder.com/120x180/FFFFFF/000000?text=Card"
+            alt="Floating Card 2"
+            class="floating-card"
+          />
+          <img
+            src="https://via.placeholder.com/120x180/FFFFFF/000000?text=Card"
+            alt="Floating Card 3"
+            class="floating-card"
+          />
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="word">Lucas Nils</span><br />
+            <span class="word">Danielsson</span>
+          </h1>
+          <p class="hero-subtitle">Sleight of hand Artist from Sweden</p>
+          <a href="#about" class="hero-cta">Discover More</a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="about-container">
+          <h2 class="about-heading">
+            <span class="word">Who</span>
+            <span class="word">Am</span>
+            <span class="word">I?</span>
+          </h2>
+
+          <div class="about-text">
+            <p>
+              I am Lucas Nils Danielsson, a passionate sleight of hand artist
+              from Sweden. With years of dedicated practice and performance, I
+              transform the impossible into reality through the art of close-up
+              magic and illusion. My journey began with a simple deck of cards
+              and has evolved into a sophisticated repertoire of mind-bending
+              performances.
+            </p>
+          </div>
+
+          <div class="video-showcase">
+            <div class="video-decorations">
+              <div class="video-decoration"></div>
+              <div class="video-decoration"></div>
+              <div class="video-decoration"></div>
+            </div>
+            <div class="video-frame"></div>
+            <div class="video-container">
+              <video autoplay muted loop playsinline>
+                <source
+                  src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+              <div class="video-overlay"></div>
+            </div>
+            <div class="video-label">Watch My Skills</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Timeline Section -->
+      <section class="timeline" id="services">
+        <div class="timeline-container">
+          <h2 class="timeline-heading">
+            <span class="word">My</span>
+            <span class="word">Journey</span>
+          </h2>
+
+          <div class="timeline-grid">
+            <!-- Item 1: Image Left, Text Right -->
+            <div class="timeline-item">
+              <div class="timeline-image">
+                <div class="image-placeholder">
+                  <div class="image-overlay">
+                    <span class="image-text">2018</span>
+                  </div>
+                </div>
               </div>
-              <div class="pin-wrapper">
-                <div class="image-wrapper" id="heroImage">
-                  <img
-                    src="assets/hero-image.jpg"
-                    alt="Placeholder Hero Image"
-                    class="image"
-                  />
+              <div class="timeline-content">
+                <div class="year">2018</div>
+                <h3 class="title">First Steps into Magic</h3>
+                <div class="description">
+                  <p>
+                    Discovered my passion for sleight of hand with a simple deck
+                    of cards. Started practicing basic card manipulations and
+                    coin tricks, spending countless hours perfecting the
+                    fundamentals.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 2: Text Left, Image Right -->
+            <div class="timeline-item reverse">
+              <div class="timeline-content">
+                <div class="year">2019</div>
+                <h3 class="title">Local Performances</h3>
+                <div class="description">
+                  <p>
+                    Began performing at local cafes and small gatherings in
+                    Stockholm. Developed my stage presence and learned to read
+                    audiences, refining my repertoire based on crowd reactions.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-image">
+                <div class="image-placeholder">
+                  <div class="image-overlay">
+                    <span class="image-text">2019</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3: Image Left, Text Right -->
+            <div class="timeline-item">
+              <div class="timeline-image">
+                <div class="image-placeholder">
+                  <div class="image-overlay">
+                    <span class="image-text">2021</span>
+                  </div>
+                </div>
+              </div>
+              <div class="timeline-content">
+                <div class="year">2021</div>
+                <h3 class="title">Advanced Techniques</h3>
+                <div class="description">
+                  <p>
+                    Mastered advanced card flourishes and coin manipulations.
+                    Started incorporating mentalism and psychological techniques
+                    into my performances, creating more immersive experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 4: Text Left, Image Right -->
+            <div class="timeline-item reverse">
+              <div class="timeline-content">
+                <div class="year">2023</div>
+                <h3 class="title">Professional Recognition</h3>
+                <div class="description">
+                  <p>
+                    Gained recognition in the Swedish magic community. Started
+                    performing at corporate events and private parties,
+                    establishing my reputation as a skilled close-up magician.
+                  </p>
+                </div>
+              </div>
+              <div class="timeline-image">
+                <div class="image-placeholder">
+                  <div class="image-overlay">
+                    <span class="image-text">2023</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="section copy">
-            <div class="section-wrapper">
-              <div class="content">
-                <h1 class="tagline">Stockholm-based Professional Magician</h1>
-                <p class="hero-content">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Voluptate tempore rem odit soluta reprehenderit cum voluptates
-                  mollitia odio eaque, culpa vel nulla cupiditate alias quidem
-                  ducimus neque saepe laboriosam architecto!
+        </div>
+      </section>
+
+      <!-- Services Section (Awwwards-inspired) -->
+      <section class="services" id="services-section">
+        <div class="services-container">
+          <h2 class="services-heading">
+            <span class="word">What</span>
+            <span class="word">I</span>
+            <span class="word">Do</span>
+          </h2>
+
+          <div class="services-grid">
+            <a href="#contact" class="service-tile">
+              <div class="service-bg"></div>
+              <div class="service-content">
+                <div class="service-kicker">Service 01</div>
+                <h3 class="service-title">Close‑Up Magic</h3>
+                <p class="service-desc">Intimate sleight of hand inches from your eyes.</p>
+              </div>
+              <div class="service-meta">Book Now</div>
+            </a>
+
+            <a href="#contact" class="service-tile">
+              <div class="service-bg"></div>
+              <div class="service-content">
+                <div class="service-kicker">Service 02</div>
+                <h3 class="service-title">Birthday Parties</h3>
+                <p class="service-desc">High-energy interactive sets tailored for celebrations.</p>
+              </div>
+              <div class="service-meta">Enquire</div>
+            </a>
+
+            <a href="#contact" class="service-tile">
+              <div class="service-bg"></div>
+              <div class="service-content">
+                <div class="service-kicker">Service 03</div>
+                <h3 class="service-title">Corporate Events</h3>
+                <p class="service-desc">Polished walk-around magic that elevates brand moments.</p>
+              </div>
+              <div class="service-meta">Get Quote</div>
+            </a>
+
+            <a href="#contact" class="service-tile">
+              <div class="service-bg"></div>
+              <div class="service-content">
+                <div class="service-kicker">Service 04</div>
+                <h3 class="service-title">Wedding Magic</h3>
+                <p class="service-desc">Elegant routines for receptions and cocktail hours.</p>
+              </div>
+              <div class="service-meta">Check Dates</div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filler Section  -->
+      <section class="filler-content" id="filler">
+        <div class="filler-container">
+          <div class="filler-text">
+            <h2 class="filler-heading">
+              <span class="word">The</span>
+              <span class="word">Art</span>
+              <span class="word">of</span>
+              <span class="word">Impossible</span>
+            </h2>
+            <p class="filler-description">
+              Every performance is a journey into the extraordinary, where reality bends and wonder takes center stage. 
+              Through years of dedication and countless hours of practice, I've mastered the delicate balance between 
+              technique and artistry that makes magic truly magical.
+            </p>
+          </div>
+          <div class="filler-stats">
+            <div class="stat-item">
+              <div class="stat-number">500+</div>
+              <div class="stat-label">Performances</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">7</div>
+              <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="gallery" id="gallery">
+        <div class="gallery-container">
+          <h2 class="gallery-heading">
+            <span class="word">Magic</span>
+            <span class="word">Showcase</span>
+          </h2>
+
+          <div class="grid">
+            <div class="gallery-item large-item photography floating">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=600&fit=crop&crop=top"
+                  alt="Mountain Landscape"
+                />
+              </div>
+              <div class="category-tag">Photography</div>
+              <div class="view-counter">2.4k views</div>
+              <div class="overlay">
+                <h3>Ethereal Peaks</h3>
+                <p>
+                  Capturing the serene beauty of mountain landscapes during
+                  golden hour, where nature's grandeur meets artistic vision.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Video Item -->
+            <div class="gallery-item compact-item video-item videography">
+              <div class="media-container">
+                <video muted loop>
+                  <source
+                    src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="play-button">▶</div>
+              <div class="category-tag">Video</div>
+              <div class="view-counter">1.8k views</div>
+              <div class="overlay">
+                <h3>Urban Motion</h3>
+                <p>
+                  Dynamic cityscape cinematography capturing the pulse of
+                  metropolitan life.
+                </p>
+              </div>
+            </div>
+
+            <!-- Tall Art Item -->
+            <div class="gallery-item tall-item art">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=400&h=600&fit=crop"
+                  alt="Abstract Art"
+                />
+              </div>
+              <div class="category-tag">Art</div>
+              <div class="view-counter">1.5k views</div>
+              <div class="overlay">
+                <h3>Fluid Dynamics</h3>
+                <p>
+                  Experimental mixed media exploring the intersection of chaos
+                  and control.
+                </p>
+              </div>
+            </div>
+
+            <!-- Medium Wide Design Item -->
+            <div class="gallery-item medium-wide-item design">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&h=300&fit=crop"
+                  alt="Abstract Design"
+                />
+              </div>
+              <div class="category-tag">Design</div>
+              <div class="view-counter">3.1k views</div>
+              <div class="overlay">
+                <h3>Digital Abstraction</h3>
+                <p>
+                  Exploring geometric forms and color theory in contemporary
+                  digital art.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Fashion Item -->
+            <div class="gallery-item compact-item fashion">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=300&fit=crop"
+                  alt="Fashion Photography"
+                />
+              </div>
+              <div class="category-tag">Fashion</div>
+              <div class="view-counter">4.7k views</div>
+              <div class="overlay">
+                <h3>Urban Elegance</h3>
+                <p>
+                  Contemporary fashion photography blending street style with
+                  haute couture.
+                </p>
+              </div>
+            </div>
+
+            <!-- Medium Tall Photography Item -->
+            <div class="gallery-item medium-tall-item photography">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=500&fit=crop"
+                  alt="Forest Pathway"
+                />
+              </div>
+              <div class="category-tag">Photography</div>
+              <div class="view-counter">5.2k views</div>
+              <div class="overlay">
+                <h3>Forest Chronicles</h3>
+                <p>
+                  An enchanting journey through ancient woodlands, where light
+                  and shadow dance among towering trees.
+                </p>
+              </div>
+            </div>
+
+            <!-- Square Architecture Item -->
+            <div class="gallery-item square-item architecture">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&h=500&fit=crop"
+                  alt="Modern Architecture"
+                />
+              </div>
+              <div class="category-tag">Architecture</div>
+              <div class="view-counter">2.9k views</div>
+              <div class="overlay">
+                <h3>Structural Poetry</h3>
+                <p>
+                  Minimalist architecture that speaks through form, light, and
+                  spatial harmony.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Video Item -->
+            <div class="gallery-item compact-item video-item videography">
+              <div class="media-container">
+                <video muted loop>
+                  <source
+                    src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="play-button">▶</div>
+              <div class="category-tag">Video</div>
+              <div class="view-counter">3.3k views</div>
+              <div class="overlay">
+                <h3>Ocean Waves</h3>
+                <p>
+                  Mesmerizing coastal cinematography capturing the eternal dance
+                  of water and shore.
+                </p>
+              </div>
+            </div>
+
+            <!-- Wide Photography Item -->
+            <div class="gallery-item wide-item photography">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&h=300&fit=crop&crop=center"
+                  alt="Sunset Landscape"
+                />
+              </div>
+              <div class="category-tag">Photography</div>
+              <div class="view-counter">6.1k views</div>
+              <div class="overlay">
+                <h3>Golden Hour</h3>
+                <p>
+                  The magic moment when day transitions to night, painted in
+                  warm hues.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Design Item -->
+            <div class="gallery-item compact-item design">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop&crop=bottom"
+                  alt="Graphic Design"
+                />
+              </div>
+              <div class="category-tag">Design</div>
+              <div class="view-counter">2.7k views</div>
+              <div class="overlay">
+                <h3>Type & Form</h3>
+                <p>
+                  Experimental typography that challenges conventional design
+                  boundaries.
+                </p>
+              </div>
+            </div>
+
+            <!-- Medium Wide Art Item -->
+            <div class="gallery-item medium-wide-item art">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=300&fit=crop&crop=top"
+                  alt="Contemporary Art"
+                />
+              </div>
+              <div class="category-tag">Art</div>
+              <div class="view-counter">1.9k views</div>
+              <div class="overlay">
+                <h3>Digital Canvas</h3>
+                <p>
+                  Where traditional artistry meets cutting-edge digital
+                  techniques.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Portrait Photography -->
+            <div class="gallery-item compact-item photography">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=300&fit=crop"
+                  alt="Portrait Photography"
+                />
+              </div>
+              <div class="category-tag">Photography</div>
+              <div class="view-counter">4.5k views</div>
+              <div class="overlay">
+                <h3>Human Stories</h3>
+                <p>
+                  Intimate portraits that reveal the depth and complexity of the
+                  human experience.
+                </p>
+              </div>
+            </div>
+
+            <!-- Medium Tall Fashion Item -->
+            <div class="gallery-item medium-tall-item fashion">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=400&h=500&fit=crop&crop=top"
+                  alt="Fashion Editorial"
+                />
+              </div>
+              <div class="category-tag">Fashion</div>
+              <div class="view-counter">3.8k views</div>
+              <div class="overlay">
+                <h3>Editorial Vision</h3>
+                <p>
+                  High fashion editorial that pushes creative boundaries and
+                  challenges conventions.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Video Item -->
+            <div class="gallery-item compact-item video-item videography">
+              <div class="media-container">
+                <video muted loop>
+                  <source
+                    src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                    type="video/mp4"
+                  />
+                </video>
+              </div>
+              <div class="play-button">▶</div>
+              <div class="category-tag">Video</div>
+              <div class="view-counter">2.1k views</div>
+              <div class="overlay">
+                <h3>Street Life</h3>
+                <p>
+                  Documentary-style filming capturing authentic moments in urban
+                  environments.
+                </p>
+              </div>
+            </div>
+
+            <!-- Medium Wide Photography Item -->
+            <div class="gallery-item medium-wide-item photography">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&h=300&fit=crop&crop=bottom"
+                  alt="Nature Photography"
+                />
+              </div>
+              <div class="category-tag">Photography</div>
+              <div class="view-counter">5.7k views</div>
+              <div class="overlay">
+                <h3>Wild Serenity</h3>
+                <p>
+                  Capturing the untouched beauty of natural landscapes in their
+                  purest form.
+                </p>
+              </div>
+            </div>
+
+            <!-- Compact Architecture Item -->
+            <div class="gallery-item compact-item architecture">
+              <div class="media-container">
+                <img
+                  src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=400&h=300&fit=crop&crop=bottom"
+                  alt="Architectural Detail"
+                />
+              </div>
+              <div class="category-tag">Architecture</div>
+              <div class="view-counter">3.2k views</div>
+              <div class="overlay">
+                <h3>Urban Geometry</h3>
+                <p>
+                  Exploring the mathematical beauty hidden within architectural
+                  structures.
                 </p>
               </div>
             </div>
           </div>
-        </section>
-        <section class="about-container">
-          <section class="about-video">
-            <div id="hero-shape">
-              <div id="hero-1"></div>
-              <div id="hero-2"></div>
-              <div id="hero-3"></div>
+        </div>
+      </section>
+      
+      <!-- Killer CTA Section -->
+      <section class="killer-cta" id="cta">
+        <div class="cta-bg">
+          <div class="cta-particles"></div>
+          <div class="cta-glow"></div>
+        </div>
+        <div class="cta-container">
+          <div class="cta-content">
+            <h2 class="cta-heading">
+              <span class="word">Ready</span>
+              <span class="word">to</span>
+              <span class="word">Experience</span>
+              <span class="word">Magic?</span>
+            </h2>
+            <p class="cta-subtitle">
+              Let's create an unforgettable moment that will leave your guests talking for years to come. 
+              Book your performance today and witness the impossible become possible.
+            </p>
+            <div class="cta-buttons">
+              <a href="#contact" class="cta-btn primary">
+                <span>Book Now</span>
+                <div class="btn-glow"></div>
+              </a>
+              <a href="#gallery" class="cta-btn secondary">
+                <span>View Portfolio</span>
+              </a>
             </div>
-            <video
-              src="https://videos.pexels.com/video-files/33149173/14127408_2560_1440_30fps.mp4"
-              autoplay
-              muted
-              loop
-              class="avideo"
-            ></video>
-            <div id="hero-shape-bottom-left">
-              <div id="hero-1-b"></div>
-              <div id="hero-2-b"></div>
-              <div id="hero-3-b"></div>
-            </div>
-          </section>
-          <section class="about">
-            <div class="blocks-container top">
-              <div class="block-row"></div>
-              <div class="block-row"></div>
-            </div>
-            <h1>Who Am I?</h1>
-          </section>
-          <section class="about-content-section">
-            <div class="content-wrapper">
-              <div class="content-row row-image-left">
-                <div class="content-image-wrapper">
-                  <img src="assets/img 1.jpeg" alt="Description of Image 1" />
-                </div>
-                <div class="content-text-wrapper">
-                  <h2>My Journey Begins</h2>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
-                  </p>
-                </div>
-              </div>
-
-              <div class="content-row row-image-right">
-                <div class="content-text-wrapper">
-                  <h2>Developing My Craft</h2>
-                  <p>
-                    Voluptate tempore rem odit soluta reprehenderit cum
-                    voluptates mollitia odio eaque, culpa vel nulla cupiditate
-                    alias quidem ducimus neque saepe laboriosam architecto! Sed
-                    ut perspiciatis unde omnis iste natus error sit voluptatem
-                    accusantium doloremque laudantium, totam rem aperiam, eaque
-                    ipsa quae ab illo inventore veritatis et quasi architecto
-                    beatae vitae dicta sunt explicabo.
-                  </p>
-                </div>
-                <div class="content-image-wrapper">
-                  <img src="assets/img 1.jpeg" alt="Description of Image 2" />
-                </div>
-              </div>
-
-              <div class="content-row row-image-left">
-                <div class="content-image-wrapper">
-                  <img src="assets/img 1.jpeg" alt="Description of Image 3" />
-                </div>
-                <div class="content-text-wrapper">
-                  <h2>Philosophy of Wonder</h2>
-                  <p>
-                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                    odit aut fugit, sed quia consequuntur magni dolores eos qui
-                    ratione voluptatem sequi nesciunt. Neque porro quisquam est,
-                    qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                    velit, sed quia non numquam eius modi tempora incidunt ut
-                    labore et dolore magnam aliquam quaerat voluptatem.
-                  </p>
-                </div>
-              </div>
-
-              <div class="content-row row-image-right">
-                <div class="content-text-wrapper">
-                  <h2>Connecting Through Art</h2>
-                  <p>
-                    Ut enim ad minima veniam, quis nostrum exercitationem ullam
-                    corporis suscipit laboriosam, nisi ut aliquid ex ea commodi
-                    consequatur? Quis autem vel eum iure reprehenderit qui in ea
-                    voluptate velit esse quam nihil molestiae consequatur, vel
-                    illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-                  </p>
-                </div>
-                <div class="content-image-wrapper">
-                  <img src="assets/img 1.jpeg" alt="Description of Image 4" />
-                </div>
-              </div>
-
-              <div class="content-row row-image-left">
-                <div class="content-image-wrapper">
-                  <img src="assets/img 1.jpeg" alt="Description of Image 5" />
-                </div>
-                <div class="content-text-wrapper">
-                  <h2>The Next Illusion</h2>
-                  <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint
-                    occaecati cupiditate non provident, similique sunt in culpa
-                    qui officia deserunt mollitia animi, id est laborum et
-                    dolorum fuga. Et harum quidem rerum facilis est et expedita
-                    distinctio.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-        </section>
-        <section class="work">
-          <div class="intro">
-            <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, autem?</h1>
           </div>
-          <div class="sticky-cols">
-            <div class="sticky-cols-wrapper">
-              <div class="col col-1">
-                <div class="col-content">
-                  <div class="col-content-wrapper">
-                    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corporis doloremque fugit dignissimos ipsum quas!</h1>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit, dolorum fugit, dicta modi asperiores doloremque accusantium, dolores unde odio cum quas! Perspiciatis quisquam veritatis adipisci maiores voluptatum sunt quasi repudiandae.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col col-2">
-                <div class="col-img col-img-1">
-                  <div class="col-img-wrapper">
-                    <img src="assets/img 1.jpeg" alt="">
-                  </div>
-                </div>
-                <div class="col-img col-img-2">
-                  <div class="col-img-wrapper">
-                    <img src="assets/img2.jpeg" alt="">
-                  </div>
-                </div>
-              </div>
-              <div class="col col-3">
-                <div class="col-content-wrapper">
-                  <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, rem.</h1>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim tenetur reiciendis explicabo, in laudantium dolorem facere cumque necessitatibus sunt similique quibusdam adipisci iste! Temporibus nesciunt itaque necessitatibus, minus aliquam consequatur?</p>
-                </div>
-                <div class="col-content-wrapper-2">
-                  <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt, eaque?</h1>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis expedita ab magnam neque ipsam adipisci beatae iste odit, voluptatibus ullam possimus, laborum dolorum corporis vitae harum modi repellat reiciendis asperiores.
-                  </p>
-                </div>
-              </div>
-              <div class="col col-4">
-                <div class="col-img-wrapper">
-                  <img src="assets/img3.jpeg" alt="">
-                </div>
+          <div class="cta-visual">
+            <div class="magic-circle">
+              <div class="circle-ring"></div>
+              <div class="circle-ring"></div>
+              <div class="circle-ring"></div>
+              <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
               </div>
             </div>
           </div>
-          <div class="outro">
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, sapiente.</h1>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>  
     </main>
-    <script src="js/gallery.js"></script>
-    <script src="js/hero.js"></script>
+
+
+    <div class="scroll-spacer"></div>
+    <!-- Footer Section  -->
+    <footer>
+      <div class="shape1"></div>
+      <div class="shape2"></div>
+      <div class="shape3"></div>
+      <div class="footerupper">
+          <div>
+            <a href="#gallery"><h2>Work</h2></a>
+            <a href="#services"><h2>Services</h2></a>
+            <a href="#about"><h2>About</h2></a>
+          </div>
+          <div class="email">
+              <p>Get industry insights and creative inspiration straight to your inbox.</p>
+              <h6>Email Address</h6>
+          </div>
+      </div>
+      <div class="footerlower">
+          <h1>Lucas</h1>
+          
+          <div>
+              <h5>Copyright © Lucas Nils Danielsson</h5>
+              <h5>Sweden, NY</h5>
+          </div>
+      </div>
+    </footer>
+    <!-- JavaScript -->
     <script src="js/main.js"></script>
-    <script src="js/preloader.js"></script>
-    <script src="js/menu.js"></script>
-    
   </body>
 </html>
